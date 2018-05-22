@@ -10,3 +10,10 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+class Store < ActiveRecord::Base
+  has_many :employees
+end
+
+class Employeee < ActiveRecord::Base
+  belongs_to :store
+end
