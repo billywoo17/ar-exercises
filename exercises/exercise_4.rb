@@ -16,9 +16,9 @@ puts "----------"
  puts "#{stores.name} #{stores.annual_revenue}"
 end
 
-@womens_stores = Store.where(womens_apparel: true)
+@womens_stores = Store.where(womens_apparel: true).where('annual_revenue < ?', 1000000)
 @womens_stores.each do |stores|
- if stores.annual_revenue < 1000000
+ # if stores.annual_revenue < 1000000
    puts "#{stores.name} #{stores.annual_revenue}"
- end
+ # end
 end
