@@ -14,5 +14,5 @@ puts "----------"
 puts "Enter a store name"
 @storeName = gets.chomp
 
-@store7 = Store.create(name: @storeName, annual_revenue: 300000, mens_apparel: false, womens_apparel: false)
+@store7 = Store.create(name: @storeName)
 puts @store7.errors.full_messages
