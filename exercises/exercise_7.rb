@@ -12,11 +12,7 @@ puts "----------"
 # Your code goes here ...
 
 puts "Enter a store name"
-@answer = gets.chomp.to_i
+@storeName = gets.chomp
 
-@store7 = Store.create(name: @answer)
-store = Store.new
-store.valid?
-puts store.errors.details[:name]
-puts store.errors.details[:annual_revenue]
-puts store.errors.details[:apparel]
+@store7 = Store.create(name: @storeName, annual_revenue: 300000, mens_apparel: false, womens_apparel: false)
+puts @store7.errors.full_messages
