@@ -26,3 +26,6 @@ if @empty_store.destroy
 else
   puts "Whoa! Empty store should be destroyable... Not cool!"
 end
+
+
+puts "hello"
